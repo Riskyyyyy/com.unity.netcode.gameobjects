@@ -73,7 +73,7 @@ promotion_audit_{{ project.name }}_{{ package.name }}_{{ test_platforms.first.na
     UPMCI_PROMOTION: 1
   commands:
     - npm install upm-ci-utils@stable -g --registry https://artifactory.prd.cds.internal.unity3d.com/artifactory/api/npm/upm-npm
-    - upm-ci package test -u {{ validation_editor }} --package-path {{ package.path }} --type promotion-audit --project-path {{ project.path }} --package-filter {{ package.name }}
+    - upm-ci package test -u {{ validation_editor }} --package-path {{ package.path }} --type promotion-audit --import-samples
   artifacts:
     logs:
       paths:
