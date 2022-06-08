@@ -79,7 +79,7 @@ promotion_audit_{{ project.name }}_{{ package.name }}_{{ test_platforms.first.na
   dependencies:
     - .yamato/project-pack.yml#pack_{{ project.name }}
 
-package_tests_{{ project.name }}_{{ package.name }}_{{ test_platforms.first.name }}_{{ validation_editor }}:
+package_tests_vetting{{ project.name }}_{{ package.name }}_{{ test_platforms.first.name }}_{{ validation_editor }}:
   name : Package Vetting Tests {{ project.name }} - Package {{ package.name }} - {{ validation_editor }} on {{ test_platforms.first.name }}
   agent:
     type: {{ test_platforms.first.type }}
@@ -97,7 +97,7 @@ package_tests_{{ project.name }}_{{ package.name }}_{{ test_platforms.first.name
   dependencies:
     - .yamato/project-pack.yml#pack_{{ project.name }}
 
-package_tests_{{ project.name }}_{{ package.name }}_{{ test_platforms.first.name }}_{{ validation_editor }}:
+package_tests_isolation{{ project.name }}_{{ package.name }}_{{ test_platforms.first.name }}_{{ validation_editor }}:
   name : Package Isolation Tests {{ project.name }} - Package {{ package.name }} - {{ validation_editor }} on {{ test_platforms.first.name }}
   agent:
     type: {{ test_platforms.first.type }}
